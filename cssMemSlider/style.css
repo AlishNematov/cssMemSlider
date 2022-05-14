@@ -17,6 +17,7 @@ h2 {
     font-weight: 400;
     color: #88ceeb;
     display: block;
+    margin: 0;
 }
 
 .wrapper {
@@ -101,17 +102,18 @@ h2 {
     transform: translate(-75%, 0);
 }
 
-.container {
+.slider__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0.7rem 0;
 }
 
 .navigation {
     display: flex;
 }
 
-.titles {
+.slider__titles {
     display: inline-flex;
 
 }
@@ -119,50 +121,49 @@ h2 {
 .title {
     opacity: 1;
     display: none;
-    margin: 0.5rem 0 0 0;
 }
 
 @keyframes shadow {
     from {opacity: 0}
-    to {text-shadow: 1}
+    to {opacity: 1}
 }
 
-#slide1:checked ~ .container > .titles > .title_1 {
+#slide1:checked ~ .slider__container > .slider__titles > .title_1 {
     display: block;
     animation: shadow 3s;
 }
 
-#slide2:checked ~ .container > .titles > .title_2 {
+#slide2:checked ~ .slider__container > .slider__titles > .title_2 {
     display: block;
     animation: shadow 3s;
 }
 
-#slide3:checked ~ .container > .titles > .title_3 {
+#slide3:checked ~ .slider__container > .slider__titles > .title_3 {
     display: block;
     animation: shadow 3s;
 }
 
-#slide4:checked ~ .container > .titles > .title_4 {
+#slide4:checked ~ .slider__container > .slider__titles > .title_4 {
     display: block;
     animation: shadow 3s;
 }
 
-#slide1:checked ~ .container > .navigation label:nth-child(1) span {
+#slide1:checked ~ .slider__container > .navigation label:nth-child(1) span {
     background-color: transparent;
     transition: all .9s;
 }
 
-#slide2:checked ~ .container > .navigation label:nth-child(2) span {
+#slide2:checked ~ .slider__container > .navigation label:nth-child(2) span {
     background-color: transparent;
     transition: all .9s;
 }
 
-#slide3:checked ~ .container > .navigation label:nth-child(3) span {
+#slide3:checked ~ .slider__container > .navigation label:nth-child(3) span {
     background-color: transparent;
     transition: all .9s;
 }
 
-#slide4:checked ~ .container > .navigation label:nth-child(4) span {
+#slide4:checked ~ .slider__container > .navigation label:nth-child(4) span {
     background-color: transparent;
     transition: all .9s;
 }
@@ -177,7 +178,7 @@ h2 {
         max-width: 80%;
     }
 
-    .container {
+    .slider__container {
         flex-direction: column;
         margin-top: 1rem;
     }
@@ -186,7 +187,7 @@ h2 {
         order: 1;
     }
 
-    .titles {
+    .slider__titles {
         margin-top: 1rem;
         order: 2;
         align-self: start;
