@@ -2,24 +2,29 @@ html {
     box-sizing: border-box;
 }
 
+
 h2 {
-    font-family: 'Georgia' sans-serif;
+    font-family: 'Georgia', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     color: black;
+    display: block;
 }
 
 .wrapper {
+    background-color: #d4d9d7;
     max-width: 80rem;
+    height: 100vh;
     overflow: hidden;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .slider {
-    /* width: 90%; */
+    max-width: 60%;
     height: auto;
     overflow: hidden;
     margin: 0 auto;
@@ -28,12 +33,11 @@ h2 {
 .slider__items {
     width: 400%;
     display: flex;
+    transition: all .9s;
 }
 
 .slider input {
-    visibility: hidden;
-    height: 0;
-    width: 0;
+    display: none;
 }
 
 .slider__items img {
@@ -42,12 +46,6 @@ h2 {
 
 .slider__items .item {
     line-height: 0;
-}
-
-.navigation {
-    display: inline-flex;
-    margin-top: 1rem;
-    align-self: end;
 }
 
 .navigation label {
@@ -76,4 +74,54 @@ h2 {
 
 #slide4:checked ~ .slider__items {
     margin-left: -300%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+}
+
+.titles {
+    display: inline-flex;
+
+}
+
+.title {
+    opacity: 0;
+    display: none;
+    transition-delay: .9s;
+
+}
+
+#slide1:checked ~ .container > .titles > .title_1 {
+    display: inline;
+    opacity: 1;
+    transition: display 1s ease-in-out;
+    transition-delay: .9s;
+}
+
+#slide2:checked ~ .container > .titles > .title_2 {
+    display: inline;
+    opacity: 1;
+    transition: display 1s ease-in-out;
+    transition-delay: .9s;
+}
+
+#slide3:checked ~ .container > .titles > .title_3 {
+    display: inline;
+    opacity: 1;
+    transition: display 1s ease-in-out;
+    transition-delay: .9s;
+}
+
+#slide4:checked ~ .container > .titles > .title_4 {
+    display: inline;
+    opacity: 1;
+    transition: display 1s ease-in-out;
+    transition-delay: .9s;
 }
