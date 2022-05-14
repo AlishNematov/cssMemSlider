@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Georgia' sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: black;
+}
+
+.wrapper {
+    max-width: 80rem;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider {
+    /* width: 90%; */
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider__items {
+    width: 400%;
+    display: flex;
+}
+
+.slider input {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+.slider__items img {
+    width: 100%;
+}
+
+.slider__items .item {
+    line-height: 0;
+}
+
+.navigation {
+    display: inline-flex;
+    margin-top: 1rem;
+    align-self: end;
+}
+
+.navigation label {
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid black;
+    margin: 0 5px;
+    align-self: end;
+}
+
+.navigation label:active {
+    background-color: red;
+}
+
+#slide1:checked ~ .slider__items {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .slider__items {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ .slider__items {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ .slider__items {
+    margin-left: -300%;
+}
