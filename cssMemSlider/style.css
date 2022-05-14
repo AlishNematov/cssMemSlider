@@ -49,7 +49,8 @@ h2 {
 }
 
 .navigation label {
-    padding: 0.4rem;
+    padding: 0.1rem;
+    cursor: pointer;
 }
 
 .navigation span {
@@ -64,11 +65,11 @@ h2 {
     align-self: end;
 }
 
-.navigation span:hover {
+.navigation label:hover > span {
     background-color: white;
     cursor: pointer;
     border-color: white;
-    transition: all .3s;
+    transition: all .9s ease;
 }
 
 #slide1:checked ~ .slider__items {
@@ -152,4 +153,30 @@ h2 {
 #slide4:checked ~ .container > .navigation label:nth-child(4) span {
     background-color: transparent;
     transition: all .9s;
+}
+
+@media (max-width: 767px){
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider {
+        max-width: 80%;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .navigation {
+        order: 1;
+    }
+
+    .titles {
+        margin-top: 1rem;
+        order: 2;
+        align-self: start;
+    }
 }
