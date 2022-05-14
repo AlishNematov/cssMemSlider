@@ -42,6 +42,7 @@ h2 {
 
 .slider__items img {
     width: 100%;
+    border-radius: 0.7rem;
 }
 
 .slider__items .item {
@@ -69,6 +70,11 @@ h2 {
     background-color: white;
     cursor: pointer;
     border-color: white;
+    transition: all .9s ease;
+}
+
+.navigation label:active > span {
+    box-shadow: 0 0 .25rem .25rem #88ceeb;
     transition: all .9s ease;
 }
 
@@ -111,28 +117,27 @@ h2 {
 
 @keyframes shadow {
     from {opacity: 0}
-    50% {text-shadow: 0}
     to {text-shadow: 1}
 }
 
 #slide1:checked ~ .container > .titles > .title_1 {
     display: block;
-    animation: shadow 2s;
+    animation: shadow 3s;
 }
 
 #slide2:checked ~ .container > .titles > .title_2 {
     display: block;
-    animation: shadow 2s;
+    animation: shadow 3s;
 }
 
 #slide3:checked ~ .container > .titles > .title_3 {
     display: block;
-    animation: shadow 2s;
+    animation: shadow 3s;
 }
 
 #slide4:checked ~ .container > .titles > .title_4 {
     display: block;
-    animation: shadow 2s;
+    animation: shadow 3s;
 }
 
 #slide1:checked ~ .container > .navigation label:nth-child(1) span {
