@@ -5,15 +5,15 @@ html {
 
 h2 {
     font-family: 'Georgia', sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
-    color: black;
+    color: #88ceeb;
     display: block;
 }
 
 .wrapper {
-    background-color: #d4d9d7;
+    background-color: #333333;
     max-width: 80rem;
     height: 100vh;
     overflow: hidden;
@@ -49,31 +49,42 @@ h2 {
 }
 
 .navigation label {
+    padding: 0.4rem;
+}
+
+.navigation span {
+    display: inline-block;
+    margin: 1rem;
     height: 1rem;
     width: 1rem;
-    border: 1px solid black;
+    border: 2px solid #88ceeb;
+    background-color: #88ceeb;
+    border-radius: 100%;
     margin: 0 5px;
     align-self: end;
 }
 
-.navigation label:active {
-    background-color: red;
+.navigation span:hover {
+    background-color: white;
+    cursor: pointer;
+    border-color: white;
+    transition: all .3s;
 }
 
 #slide1:checked ~ .slider__items {
-    margin-left: 0;
+    transform: translate(0, 0);
 }
 
 #slide2:checked ~ .slider__items {
-    margin-left: -100%;
+    transform: translate(-25%, 0);
 }
 
 #slide3:checked ~ .slider__items {
-    margin-left: -200%;
+    transform: translate(-50%, 0);
 }
 
 #slide4:checked ~ .slider__items {
-    margin-left: -300%;
+    transform: translate(-75%, 0);
 }
 
 .container {
@@ -94,6 +105,7 @@ h2 {
 .title {
     opacity: 1;
     display: none;
+    margin: 0.5rem 0 0 0;
 }
 
 @keyframes shadow {
@@ -120,4 +132,24 @@ h2 {
 #slide4:checked ~ .container > .titles > .title_4 {
     display: block;
     animation: shadow 2s;
+}
+
+#slide1:checked ~ .container > .navigation label:nth-child(1) span {
+    background-color: transparent;
+    transition: all .9s;
+}
+
+#slide2:checked ~ .container > .navigation label:nth-child(2) span {
+    background-color: transparent;
+    transition: all .9s;
+}
+
+#slide3:checked ~ .container > .navigation label:nth-child(3) span {
+    background-color: transparent;
+    transition: all .9s;
+}
+
+#slide4:checked ~ .container > .navigation label:nth-child(4) span {
+    background-color: transparent;
+    transition: all .9s;
 }
