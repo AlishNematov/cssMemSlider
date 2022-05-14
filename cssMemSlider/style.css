@@ -92,36 +92,32 @@ h2 {
 }
 
 .title {
-    opacity: 0;
+    opacity: 1;
     display: none;
-    transition-delay: .9s;
+}
 
+@keyframes shadow {
+    from {opacity: 0}
+    50% {text-shadow: 0}
+    to {text-shadow: 1}
 }
 
 #slide1:checked ~ .container > .titles > .title_1 {
-    display: inline;
-    opacity: 1;
-    transition: display 1s ease-in-out;
-    transition-delay: .9s;
+    display: block;
+    animation: shadow 2s;
 }
 
 #slide2:checked ~ .container > .titles > .title_2 {
-    display: inline;
-    opacity: 1;
-    transition: display 1s ease-in-out;
-    transition-delay: .9s;
+    display: block;
+    animation: shadow 2s;
 }
 
 #slide3:checked ~ .container > .titles > .title_3 {
-    display: inline;
-    opacity: 1;
-    transition: display 1s ease-in-out;
-    transition-delay: .9s;
+    display: block;
+    animation: shadow 2s;
 }
 
 #slide4:checked ~ .container > .titles > .title_4 {
-    display: inline;
-    opacity: 1;
-    transition: display 1s ease-in-out;
-    transition-delay: .9s;
+    display: block;
+    animation: shadow 2s;
 }
